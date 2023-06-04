@@ -5,10 +5,15 @@ body {
   }
   
   header {
-    background-color: #333;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
     color: #fff;
     padding: 20px;
   }
+
+  .menu {
+    text-align: center;
+  }
+  
   
   nav ul {
     list-style-type: none;
@@ -22,10 +27,15 @@ body {
   }
   
   nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px;
+    transition: 0.2s ease-in-out;
   }
+
+  nav a:hover {
+    font-size: 1.2em;
+    background-color: #ff00ff;
+    /* Adicione outras propriedades de estilo para destacar o botão */
+  }
+  
   
   main {
     margin: 20px;
