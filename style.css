@@ -9,30 +9,36 @@ header {
   color: #fff;
   padding: 20px;
   position: relative;
+  overflow: hidden;
 }
 
-header::before {
-  content: "";
+.rays-container {
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(117, 15, 130, 0.5) 0%, rgba(117, 15, 130, 0.2) 50%, rgba(117, 15, 130, 0.5) 100%);
-  animation: wave 2s linear infinite;
-  z-index: -1;
+  pointer-events: none;
 }
 
-@keyframes wave {
+.ray {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(117, 15, 130, 0.5);
+  animation: rayAnimation 2s linear infinite;
+}
+
+@keyframes rayAnimation {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
   }
 }
-
-
 
 .menu {
   text-align: center;
