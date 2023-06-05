@@ -1,31 +1,23 @@
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-function drawLightning() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-
+function createLightning() {
+  const lightning = document.getElementById('lightning');
+  const colors = ['#ff00ff', '#ff99ff', '#cc33cc'];
+  
   for (let i = 0; i < 10; i++) {
-    const startX = Math.random() * canvas.width;
-    const startY = 0;
-    const endX = Math.random() * canvas.width;
-    const endY = canvas.height;
-    const controlX1 = startX + Math.random() * 100 - 50;
-    const controlY1 = startY + Math.random() * 100 + 50;
-    const controlX2 = endX + Math.random() * 100 - 50;
-    const controlY2 = endY + Math.random() * 100 + 50;
-
-    context.beginPath();
-    context.moveTo(startX, startY);
-    context.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
-    context.strokeStyle = 'rgba(255, 0, 255, 0.7)';
-    context.lineWidth = 4;
-    context.stroke();
+    const strike = document.createElement('div');
+    strike.className = 'lightning-strike';
+    
+    const startX = Math.random() * 100;
+    const startY = Math.random() * 100;
+    const endX = Math.random() * 100;
+    const endY = Math.random() * 100;
+    
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    strike.style.background = `radial-gradient(${color}, transparent)`;
+    
+    strike.style.clipPath = `polygon(${startX}% ${startY}%, ${endX}% ${endY}%, ${endX}% 100%, ${startX}% 100%)`;
+    
+    lightning.appendChild(strike);
   }
-
-  requestAnimationFrame(drawLightning);
 }
 
-drawLightning();
+createLightning();
