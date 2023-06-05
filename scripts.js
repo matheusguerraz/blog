@@ -12,16 +12,16 @@ function drawLightning() {
     const startY = 0;
     const endX = Math.random() * canvas.width;
     const endY = canvas.height;
-    const controlX1 = Math.random() * canvas.width;
-    const controlY1 = Math.random() * canvas.height;
-    const controlX2 = Math.random() * canvas.width;
-    const controlY2 = Math.random() * canvas.height;
+    const controlX1 = startX + Math.random() * 100 - 50;
+    const controlY1 = startY + Math.random() * 100 + 50;
+    const controlX2 = endX + Math.random() * 100 - 50;
+    const controlY2 = endY + Math.random() * 100 + 50;
 
     context.beginPath();
     context.moveTo(startX, startY);
     context.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
-    context.strokeStyle = 'rgba(117, 15, 130, 0.5)';
-    context.lineWidth = 2;
+    context.strokeStyle = 'rgba(255, 0, 255, 0.7)';
+    context.lineWidth = 4;
     context.stroke();
   }
 
