@@ -14,7 +14,7 @@ function createLightning() {
     const color = colors[Math.floor(Math.random() * colors.length)];
     strike.style.background = `radial-gradient(${color}, transparent)`;
     
-    strike.style.clipPath = "url('C:\Users\usuario\blog\lightning.svg')";
+    strike.style.clipPath = "url('C:\\Users\\usuario\\blog\\lightning.svg')";
     
     lightning.appendChild(strike);
   }
