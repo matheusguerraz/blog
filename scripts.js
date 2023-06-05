@@ -12,9 +12,9 @@ function createLightning() {
     const endY = Math.random() * 100;
     
     const color = colors[Math.floor(Math.random() * colors.length)];
-    strike.style.background = `radial-gradient(${color}, transparent)`;
-    
-    strike.style.clipPath = "url('C:\\Users\\usuario\\blog\\lightning.svg')";
+    strike.style.backgroundImage = `url('C:\\Users\\usuario\\blog\\lightning.svg')`;
+    strike.style.backgroundRepeat = 'repeat';
+    strike.style.animation = 'lightning-animation 0.5s infinite';
     
     lightning.appendChild(strike);
   }
