@@ -1,4 +1,4 @@
-function createLightning() {
+/* function createLightning() {
   const lightning = document.getElementById('lightning');
   const colors = ['#ff00ff', '#ff99ff', '#cc33cc'];
   
@@ -6,18 +6,17 @@ function createLightning() {
     const strike = document.createElement('div');
     strike.className = 'lightning-strike';
     
-    const startX = Math.random() * 100;
-    const startY = Math.random() * 100;
-    const endX = Math.random() * 100;
-    const endY = Math.random() * 100;
-    
     const color = colors[Math.floor(Math.random() * colors.length)];
-    strike.style.backgroundImage = `url('C:\\Users\\usuario\\blog\\lightning.svg')`;
-    strike.style.backgroundRepeat = 'repeat';
-    strike.style.animation = 'lightning-animation 0.5s infinite';
+    strike.style.background = `radial-gradient(${color}, transparent)`;
+    
+    const lightningImage = document.createElement('img');
+    lightningImage.src = 'lightning.svg';
+    lightningImage.classList.add('lightning-image');
+    strike.appendChild(lightningImage);
     
     lightning.appendChild(strike);
   }
 }
 
 createLightning();
+ */
