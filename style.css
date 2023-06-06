@@ -10,6 +10,14 @@ header {
   background-color: rgb(10, 25, 47);
   color: #fff;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-buttons {
+  display: flex;
+  align-items: center;
 }
 
 #lightning {
