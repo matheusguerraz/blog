@@ -11,7 +11,30 @@
     <div class="social-buttons">
       <a href="https://www.linkedin.com/in/matheus-guerra-501594209/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
       <a href="https://github.com/matheusguerraz" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#" onclick="openTab('home')">Home</a></li>
+        <li><a href="#" onclick="openTab('about')">About</a></li>
+        <li><a href="#" onclick="openTab('projects')">Projects</a></li>
+      </ul>
+    </nav>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2CCM1HTK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SX2CCM1HTK');
+    </script>
+
   </header>
+  <div id="tab-content" class="container">
+    <!-- Conteúdo da guia selecionada será carregado aqui -->
+  </div>
   <section class="container">
     <div id="centered-text">
       <p id="introduct"></p>
