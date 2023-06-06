@@ -1,22 +1,34 @@
-/* function createLightning() {
-  const lightning = document.getElementById('lightning');
-  const colors = ['#ff00ff', '#ff99ff', '#cc33cc'];
-  
-  for (let i = 0; i < 10; i++) {
-    const strike = document.createElement('div');
-    strike.className = 'lightning-strike';
-    
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    strike.style.background = `radial-gradient(${color}, transparent)`;
-    
-    const lightningImage = document.createElement('img');
-    lightningImage.src = 'lightning.svg';
-    lightningImage.classList.add('lightning-image');
-    strike.appendChild(lightningImage);
-    
-    lightning.appendChild(strike);
+const texts = {
+  introduct: "Hi, my name is",
+  name: "Matheus Guerra.",
+  resume: "I'm a Python Backend Developer",
+  description: "I have skills in web development with Django, experience with task automation and data scraping."
+};
+
+function typeWriter(element, text, delay = 100) {
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < text.length) {
+      element.textContent += text.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, delay);
+    }
+  }
+
+  type();
+}
+
+const elements = document.querySelectorAll("#centered-text p");
+const ids = Object.keys(texts);
+
+function writeLines(index) {
+  if (index < elements.length) {
+    const element = elements[index];
+    const text = texts[ids[index]];
+    typeWriter(element, text, 100);
+    setTimeout(() => writeLines(index + 1), text.length * 100 + 500);
   }
 }
 
-createLightning();
- */
+writeLines(0);  

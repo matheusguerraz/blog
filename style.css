@@ -110,7 +110,10 @@ nav a:hover {
   font-size: 30px;
   color:rgb(48, 117, 114);
   font-weight: bold;
+  animation: digitation 2s;
 }
+
+
 
 #name {
   white-space: nowrap;
