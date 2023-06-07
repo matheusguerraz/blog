@@ -10,10 +10,11 @@ header {
   position: relative;
   background-color: rgb(10, 25, 47);
   color: #fff;
-  padding: 20px;
+  padding: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .social-buttons {
@@ -52,7 +53,7 @@ header {
 h1 {
   text-align: center;
   font-family: "Bradley Hand ITC", cursive;
-  animation: typeEffect 5s infinite;
+  animation: typeEffect 3s steps(3000) forwards;
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.15em solid #fff;
@@ -75,12 +76,13 @@ h1 {
 .menu {
   text-align: center;
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  left: 47%;
   transform: translateX(-50%);
   font-size: 30px;
   color: aliceblue;
-
+  max-width: 30%;
+  margin-top: 5%;
+  white-space: nowrap;
 }
 
 .menu ul {
@@ -179,7 +181,7 @@ nav a:hover {
   font-size: 50px;
   font-family: arial;
   color: rgba(255, 255, 255, 0.6);
-  max-width: 34%;
+  max-width: 50%;
   
 }
 
@@ -197,4 +199,152 @@ footer {
   margin-top: auto;
   color: #fff;
   text-align: center;
+}
+
+.left-section {
+  text-align: left;
+  margin-left: 15%;
+}
+
+.name-about{
+  font-family: Sniglet;
+  font-weight: bold;
+  font-size: 50px;
+  color:rgba(255, 255, 255, 0.8)
+}
+
+.age-about {
+  font-size: 38px;
+  font-family: arial;
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
+.city-about {
+  font-family: arial;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.side-bar {
+  text-align: end;
+  margin-right: 10%;
+}
+
+.right-sidebar {
+  position: relative;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  max-height: calc(100vh - 200px); 
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  margin-right: 10%;
+}
+
+
+.right-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.experience {
+  position: relative;
+  margin-bottom: 10px; /* Adiciona um espaço entre as experiências */
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  width: 1px;
+  background-color: #fff;
+}
+
+.experience::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -26px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.experience:first-child::before {
+  display: none;
+}
+
+.experience:last-child::after {
+  display: none;
+}
+
+.experience:not(:last-child)::after {
+  height: calc(100% - 50%);
+}
+
+.about-description {
+  margin-top: 1%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  max-width: 40%;
+  text-align: justify;
+}
+
+.line-between-experience {
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 50%);
+  background-color: #fff;
+  left: -20px;
+  top: 50%;
+}
+
+.right-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.right-sidebar::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.line-between-experience {
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 50%);
+  background-color: #fff;
+  left: -20px;
+  top: 50%;
+}
+.experience {
+  margin-top: 5%;
+  color: aliceblue;
+  font-size: 50px;
+  margin-bottom: 10px; /* Adiciona um espaço entre as experiências */
+  margin-left: 50%;
+  text-align: justify;
+}
+
+
+.about-description {
+
+  margin-top: 1%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  max-width: 40%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: 9%;
+
 }

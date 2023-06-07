@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>About</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  
   <header>
-    <title>About</title>
-    <h1>About Me</h1>
+    <h1>Sobre mim</h1>
     <!-- Seu header personalizado aqui -->
+    <div class="social-buttons">
+      <a href="https://www.linkedin.com/in/matheus-guerra-501594209/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="https://github.com/matheusguerraz" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#" onclick="openTab('index')">Início</a></li>
+        <li><a href="#" onclick="openTab('about')">Sobre mim</a></li>
+        <li><a href="#" onclick="openTab('projects')">Projetos</a></li>
+      </ul>
+    </nav>
+    
   </header>
 
-  <section class="container">
+  <div class="container">
     <div class="left-section">
-      <img src="my-photo.jpeg" alt="My Photo">
-      <h2>Matheus Guerra</h2>
-      <p>Age: 30</p>
-      <p>Location: City, Country</p>
+      <img src="my-photo.png" alt="My Photo">
+      <div class="name-about">Matheus Guerra</div>
+      <div class="age-about">22 anos</div>
+      <div class="city-about">Bauru - SP</div>
+      <div class="city-about">(14) 93500-7448</div>
+      <div class="city-about">mathusdmellog@gmail.com</div>
+
+
       <!-- Outras informações pessoais aqui -->
     </div>
-    <div class="right-section">
-      <div class="timeline">
-        <!-- Aqui serão exibidas as experiências profissionais -->
+
+    <div class="right-sidebar">
+
+      <!-- Conteúdo do lado direito -->
+      <div class="experience">Analista de Sucesso do Cliente
+        <div class="line-between-experience"></div>
       </div>
+      <div class="about-description">Atuo internamente integrando o Comitê de Roadmap, gerenciando as
+        solicitações de melhorias na plataforma sugeridas pelos clientes e apoiando na
+        priorização das demandas, bem como em outras fases do desenvolvimento, tais
+        como prototipação e teste de usabilidade. Tenho também uma carteira de
+        clientes, na qual atuo de forma estratégica, apoiando-os no alcance de seus
+        objetivos, maximizando resultados e expandindo o negócio por meio de
+        educação corporativa e desenvolvimento de pessoas.
+      </div>
+
+      <div class="experience">
+        <div class="line-between-experience"></div>
+        Auxiliar de Contabilidade
+      </div>
+      <div class="about-description">Responsável pelo cálculo de processos trabalhistas, organização de planilhas e
+        tratativas com os clientes. Incentivei e iniciei a automatização das planilhas para otimização de trabalhos repetitivos, utilizando o VBA do Excel, para automação de cálculos e raspagem de de tabelas em sites da web.
+      </div>
+      <div class="experience">
+        <div class="line-between-experience"></div>
+        Soldado
+      </div>
+      <div class="about-description">Na seção de pessoal, eu ajudava na organização de arquivos, escrevia boletins
+        internos e fazia o controle do efetivo. Na seção de protocolo, eu era
+        responsável pelo recebimento e envio de documentos no quartel.
+      </div>
+
+      <div class="experience">
+        <div class="line-between-experience"></div>
+        Agente Administrativo
+      </div>
+      <div class="about-description">Responsável pela organização e digitalização de documentos do Banco do
+        Brasil, tenho como principal objetivo garantir a eficiência e agilidade nos
+        processos internos, bem como a segurança e integridade dos documentos.
+        
+      </div>
+
     </div>
-  </section>
-  
+
+  </div>
+
   <footer>
     <!-- Seu rodapé personalizado aqui -->
   </footer>
-  
+
   <script src="scripts.js"></script>
 </body>
 </html>
