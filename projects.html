@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projetos</title>
+  <style>
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      position: relative;
+      width: 550px;
+      height: 350px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-align: center;
+      margin-right: 60px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 20px;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .card-overlay {
+      opacity: 1;
+    }
+
+    .project-card .card-overlay h2 {
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .project-card .card-overlay p {
+      color: #ffffffee;
+      font-size: 20px;
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .project-card .card-overlay .details-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 16px;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .card-overlay .details-text {
+      opacity: 1;
+    }
+
+    .project-card .card-overlay .text-container {
+      margin: 0 20px; /* Define as margens esquerda e direita */
+      text-align: center; /* Centraliza o texto */
+      box-sizing: border-box;
+    }
+
+    /* Estilos para a modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .modal-content h2 {
+      font-size: 24px;
+      margin-top: 0;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .modal-content p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    /* Exibir a modal quando o card é clicado */
+    .project-card.clicked .modal {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+    <script>
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          const projectCard = modal.parentNode;
+          projectCard.classList.add("clicked");
+        }
+    
+        function closeModal(modalId) {
+          const modal = document.getElementById(modalId);
+          const projectCard = modal.parentNode;
+          projectCard.classList.remove("clicked");
+        }
+      </script>
+</head>
+<body>
+    <div class="cursor"></div>
+<header>
+  <title>Blog</title>
+  <h1>Meus Projetos</h1>
+  <div class="social-buttons">
+    <a href="https://www.linkedin.com/in/matheus-guerra-501594209/" target="_blank"><img src="linkedin-icon.png"
+        alt="LinkedIn"></a>
+    <a href="https://github.com/matheusguerraz" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+  </div>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="#" onclick="openTab('index')">Início</a></li>
+      <li><a href="#" onclick="openTab('about')">Sobre mim</a></li>
+      <li><a href="#" onclick="openTab('projects')">Projetos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2CCM1HTK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-SX2CCM1HTK');
+  </script>
+</header>
+<div class="projects-container">
+  <div class="project-card" onclick="openModal('modal1')">
+    <img src="vba-image.jpg" alt="Projeto 1">
+    <div class="card-overlay">
+      <h2>Relatório automatizado</h2>
+      <p>O cliente possuia um arquivo consolidado de dados dos seus clientes em um relatório Excel com mais de 100
+        mil linhas. Semanalmente, recebia um arquivo com movimentações dos últimos dias, que contemplava novos clientes
+        e outros já presentes no arquivo base. Para este desafio, utilizamos o VBA para, com base no ID dos clientes,
+        mapear os existentes e atualizar suas informações no arquivo base, e adicionar os novos.</p>
+      <p class="details-text">Ver detalhes no GitHub</p>
+    </div>
+  </div>
+  <div class="project-card" onclick="openModal('modal2')">
+    <img src="project2.png" alt="Projeto 2">
+    <div class="card-overlay">
+      <h2>Projeto 2</h2>
+      <p>Descrição do Projeto 2</p>
+      <p class="details-text">Ver detalhes no GitHub</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modais -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Relatório automatizado</h2>
+    <p>O cliente possuia um arquivo consolidado de dados dos seus clientes em um relatório Excel com mais de 100 mil
+      linhas. Semanalmente, recebia um arquivo com movimentações dos últimos dias, que contemplava novos clientes e
+      outros já presentes no arquivo base. Para este desafio, utilizamos o VBA para, com base no ID dos clientes,
+      mapear os existentes e atualizar suas informações no arquivo base, e adicionar os novos.</p>
+    <p>Outros detalhes do Projeto 1...</p>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Projeto 2</h2>
+    <p>Descrição do Projeto 2</p>
+    <p>Outros detalhes do Projeto 2...</p>
+  </div>
+</div>
+
+</body>
+</html>

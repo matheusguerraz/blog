@@ -5,9 +5,11 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <div class="cursor"></div>
   <header>
     <h1>Sobre mim</h1>
     <!-- Seu header personalizado aqui -->
+    <title>Blog</title>
     <div class="social-buttons">
       <a href="https://www.linkedin.com/in/matheus-guerra-501594209/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
       <a href="https://github.com/matheusguerraz" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
@@ -20,13 +22,23 @@
         <li><a href="#" onclick="openTab('projects')">Projetos</a></li>
       </ul>
     </nav>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2CCM1HTK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SX2CCM1HTK');
+    </script>
     
   </header>
 
-  <div class="container">
+  <div class="container delayed">
     <div class="left-section">
       <img src="my-photo.png" alt="My Photo">
-      <div class="name-about">Matheus Guerra</div>
+      <div class="name-about" >Matheus Guerra</div>
       <div class="age-about">22 anos</div>
       <div class="city-about">Bauru - SP</div>
       <div class="city-about">(14) 93500-7448</div>
@@ -36,7 +48,7 @@
       <!-- Outras informações pessoais aqui -->
     </div>
 
-    <div class="right-sidebar">
+    <div class="right-sidebar delayed">
 
       <!-- Conteúdo do lado direito -->
       <div class="experience">Analista de Sucesso do Cliente

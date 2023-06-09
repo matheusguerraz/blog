@@ -1,3 +1,36 @@
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cursor.active::before {
+  content: '';
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 300px;
+  height: 300px;
+  margin: -100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+
+
+.cursor.active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,6 +53,10 @@ header {
 .social-buttons {
   display: flex;
   align-items: center;
+}
+
+.social-buttons a{
+  margin: 5%;
 }
 
 #lightning {
@@ -135,42 +172,53 @@ nav a:hover {
 
 .container {
   display: flex;
-  justify-content:flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .container p {
+  overflow: hidden;
   margin: 0;
   width: 50%;
+  animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+  min-width: 50%;
   margin-left: 15vw;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 
-
 #introduct {
-  margin-top: 5%;
+  margin-top: 3%;
   font-family:'Courier New', Courier, monospace;
   font-size: 30px;
   color:rgb(48, 117, 114);
   font-weight: bold;
-  animation: digitation 2s;
+  animation: digitation 1s;
 }
 
-
+.typing-animation {
+  overflow: hidden;
+}
 
 #name {
   white-space: nowrap;
   line-height: 2;
   font-family: Sniglet;
   font-weight: bold;
-  font-size: 85px;
+  font-size: 48px;
   color:rgba(255, 255, 255, 0.8)
   
 }
 
 #resume {
   white-space: nowrap;
-  font-size: 78px;
+  font-size: 42px;
   font-family: Sniglet;
   font-weight: bold;
   color: rgba(128, 128, 128, 1);
@@ -178,7 +226,7 @@ nav a:hover {
 
 #description {
   margin-top: 5%;
-  font-size: 50px;
+  font-size: 30px;
   font-family: arial;
   color: rgba(255, 255, 255, 0.6);
   max-width: 50%;
@@ -228,7 +276,7 @@ footer {
 
 .side-bar {
   text-align: end;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .right-sidebar {
@@ -239,6 +287,24 @@ footer {
   scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
   margin-right: 10%;
 }
+
+@keyframes delayAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container.delayed {
+  animation: delayAnimation 1s ease-in-out;
+}
+
+.right-sidebar.delayed {
+  animation: delayAnimation 2s ease-in-out;
+}
+
 
 
 .right-sidebar::-webkit-scrollbar {
@@ -252,7 +318,7 @@ footer {
 
 .experience {
   position: relative;
-  margin-bottom: 10px; /* Adiciona um espaço entre as experiências */
+  margin-bottom: 10%; /* Adiciona um espaço entre as experiências */
 }
 
 .experience::before {
@@ -290,7 +356,7 @@ footer {
 }
 
 .about-description {
-  margin-top: 1%;
+  margin-top: 10%;
   color: rgba(255, 255, 255, 0.6);
   font-size: 24px;
   max-width: 40%;
@@ -330,9 +396,9 @@ footer {
 .experience {
   margin-top: 5%;
   color: aliceblue;
-  font-size: 50px;
+  font-size: 45px;
   margin-bottom: 10px; /* Adiciona um espaço entre as experiências */
-  margin-left: 50%;
+  margin-left: 40%;
   text-align: justify;
 }
 
@@ -342,7 +408,7 @@ footer {
   margin-top: 1%;
   color: rgba(255, 255, 255, 0.6);
   font-size: 24px;
-  max-width: 40%;
+  max-width: 50%;
   text-align: left;
   margin-left: auto;
   margin-right: 9%;
