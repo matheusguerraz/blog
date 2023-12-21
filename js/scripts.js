@@ -31,6 +31,7 @@ paragraphs.forEach((paragraph) => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   const container = document.querySelector('.container');
 
