@@ -292,9 +292,7 @@ footer {
   }
 }
 
-.container.delayed {
-  animation: delayAnimation 1s ease-in-out;
-}
+
 
 .right-sidebar.delayed {
   animation: delayAnimation 2s ease-in-out;
