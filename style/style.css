@@ -93,17 +93,8 @@ nav a:hover {
   overflow: hidden;
   margin: 0;
   width: 50%;
-  animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
   min-width: 50%;
   margin-left: 15vw;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
 }
 
 
@@ -116,9 +107,7 @@ nav a:hover {
   animation: digitation 1s;
 }
 
-.typing-animation {
-  overflow: hidden;
-}
+
 
 #name {
   white-space: nowrap;

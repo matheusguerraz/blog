@@ -24,38 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
 const paragraphs = document.querySelectorAll('.container p');
 let index = 0;
 
-function typeParagraph() {
-  if (index < paragraphs.length) {
-    const paragraph = paragraphs[index];
-    paragraph.style.display = 'block'; // Exibe o parágrafo
-
-    const text = paragraph.innerHTML;
-    const fullText = text;
-    let currentText = '';
-    let currentIndex = 0;
-
-    const interval = setInterval(() => {
-      if (currentIndex < fullText.length) {
-        currentText += fullText[currentIndex];
-        paragraph.innerHTML = currentText;
-        currentIndex++;
-      } else {
-        clearInterval(interval); // Limpa o intervalo quando o texto estiver totalmente digitado
-        index++; // Passa para o próximo parágrafo
-        typeParagraph(); // Chama a função novamente para o próximo parágrafo
-      }
-    }, 100); // Velocidade de digitação (ajuste conforme necessário)
-  }
-}
 
 // Oculta o conteúdo inicialmente
 paragraphs.forEach((paragraph) => {
   paragraph.style.display = 'none';
 });
-
-typeParagraph(); // Inicia o efeito de digitação
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
