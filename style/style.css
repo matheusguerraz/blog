@@ -91,7 +91,6 @@ h1 {
   text-align: center;
   font-family: "Bradley Hand ITC", cursive;
   animation: typeEffect 3s steps(3000) forwards;
-  overflow: hidden;
   white-space: nowrap;
   border-right: 0.15em solid #fff;
   caret-color: transparent;
@@ -176,7 +175,6 @@ nav a:hover {
 }
 
 .container p {
-  overflow: hidden;
   margin: 0;
   width: 50%;
   animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
@@ -202,9 +200,6 @@ nav a:hover {
   animation: digitation 1s;
 }
 
-.typing-animation {
-  overflow: hidden;
-}
 
 #name {
   white-space: nowrap;
