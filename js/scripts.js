@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const paragraphs = document.querySelectorAll('.container p');
 let index = 0;
 
-// Oculta o conteúdo inicialmente
-paragraphs.forEach((paragraph) => {
-  paragraph.style.display = 'none';
-});
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const container = document.querySelector('.container');
 
