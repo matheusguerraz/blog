@@ -63,7 +63,7 @@ header {
   align-items: center;
 }
 
-.social-buttons a{
+.social-buttons a {
   margin: 5%;
 }
 
@@ -92,7 +92,6 @@ header {
   100% {
     background-position: 100% 100%;
   }
-
 }
 
 h1 {
@@ -102,20 +101,18 @@ h1 {
   white-space: nowrap;
   border-right: 0.15em solid #fff;
   caret-color: transparent;
-
 }
 
 @keyframes typeEffect {
   from {
     width: 0;
-    border-right: none; 
+    border-right: none;
   }
   to {
     width: 100%;
-    border-right: none; 
+    border-right: none;
   }
 }
-
 
 .menu {
   text-align: center;
@@ -133,7 +130,6 @@ h1 {
   list-style: none;
   display: flex;
   justify-content: center;
-
 }
 
 .menu li {
@@ -148,6 +144,7 @@ h1 {
   text-decoration: none;
   color: #fff;
 }
+
 .menu a:hover {
   font-size: 1.2em;
   background-color: rgba(255, 255, 255, 0.2); /* Altere a cor de fundo para branco com transparência */
@@ -184,11 +181,12 @@ nav a:hover {
 
 .container p {
   margin: 0;
-  width: 50%;
+  width: 100%;
   animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
   min-width: 50%;
   margin-left: 15vw;
 }
+
 @keyframes typing {
   from {
     width: 0;
@@ -200,9 +198,9 @@ nav a:hover {
 
 #introduct {
   margin-top: 3%;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 30px;
-  color:rgb(48, 117, 114);
+  color: rgb(48, 117, 114);
   font-weight: bold;
   animation: digitation 1s;
 }
@@ -213,8 +211,7 @@ nav a:hover {
   font-family: Sniglet;
   font-weight: bold;
   font-size: 48px;
-  color:rgba(255, 255, 255, 0.8)
-  
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #resume {
@@ -230,8 +227,7 @@ nav a:hover {
   font-size: 30px;
   font-family: arial;
   color: rgba(255, 255, 255, 0.6);
-  max-width: 50%;
-  
+  max-width: 100%;
 }
 
 section {
@@ -255,18 +251,17 @@ footer {
   margin-left: 15%;
 }
 
-.name-about{
+.name-about {
   font-family: Sniglet;
   font-weight: bold;
   font-size: 50px;
-  color:rgba(255, 255, 255, 0.8)
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .age-about {
   font-size: 38px;
   font-family: arial;
   color: rgba(255, 255, 255, 0.6);
-
 }
 
 .city-about {
@@ -284,7 +279,7 @@ footer {
   position: relative;
   overflow-y: auto;
   scrollbar-width: thin;
-  max-height: calc(100vh - 200px); 
+  max-height: calc(100vh - 200px);
   scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
   margin-right: 10%;
 }
@@ -300,6 +295,7 @@ footer {
 
 .right-sidebar.delayed {
   animation: delayAnimation 2s ease-in-out;
+  margin-left: 20px; /* Ajuste o valor conforme necessário */
 }
 
 .right-sidebar::-webkit-scrollbar {
@@ -317,7 +313,6 @@ footer {
   font-size: 24px;
   max-width: 100%; /* Alterado para 100% para ocupar o espaço disponível */
   text-align: left;
-  margin-left: auto;
   margin-right: 0; /* Alterado para 0 para remover a margem à direita */
 }
 
@@ -334,7 +329,6 @@ footer {
 .experience::before,
 .experience::after {
   content: "";
-  position: absolute;
   background-color: #fff;
 }
 
@@ -352,22 +346,4 @@ footer {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-}
-
-
-.right-sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.right-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-}
-
-.right-sidebar::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.right-sidebar delayed {
-  margin-left: 150%;
 }
