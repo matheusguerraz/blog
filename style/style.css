@@ -181,8 +181,7 @@ nav a:hover {
 
 .container p {
   margin: 0;
-  width: 100%;
-  animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+  width: 60%;
   min-width: 50%;
   margin-left: 15vw;
 }
@@ -198,7 +197,7 @@ nav a:hover {
 
 #introduct {
   margin-top: 3%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Bradley Hand ITC", cursive;
   font-size: 30px;
   color: rgb(48, 117, 114);
   font-weight: bold;
@@ -208,7 +207,7 @@ nav a:hover {
 #name {
   white-space: nowrap;
   line-height: 2;
-  font-family: Sniglet;
+  font-family: "Bradley Hand ITC", cursive;
   font-weight: bold;
   font-size: 48px;
   color: rgba(255, 255, 255, 0.8);
@@ -217,7 +216,7 @@ nav a:hover {
 #resume {
   white-space: nowrap;
   font-size: 42px;
-  font-family: Sniglet;
+  font-family: "Bradley Hand ITC", cursive;
   font-weight: bold;
   color: rgba(128, 128, 128, 1);
 }
@@ -225,7 +224,7 @@ nav a:hover {
 #description {
   margin-top: 5%;
   font-size: 30px;
-  font-family: arial;
+  font-family: "Bradley Hand ITC", cursive;
   color: rgba(255, 255, 255, 0.6);
   max-width: 100%;
 }
@@ -252,7 +251,7 @@ footer {
 }
 
 .name-about {
-  font-family: Sniglet;
+  font-family: "Bradley Hand ITC", cursive;
   font-weight: bold;
   font-size: 50px;
   color: rgba(255, 255, 255, 0.8);
@@ -260,12 +259,12 @@ footer {
 
 .age-about {
   font-size: 38px;
-  font-family: arial;
+  font-family: "Bradley Hand ITC", cursive;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .city-about {
-  font-family: arial;
+  font-family: "Bradley Hand ITC", cursive;
   font-size: 28px;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -295,7 +294,7 @@ footer {
 
 .right-sidebar.delayed {
   animation: delayAnimation 2s ease-in-out;
-  margin-left: 20px; /* Ajuste o valor conforme necessário */
+  margin-left: 350px; /* Ajuste o valor conforme necessário */
 }
 
 .right-sidebar::-webkit-scrollbar {
@@ -323,7 +322,7 @@ footer {
   color: aliceblue;
   font-size: 45px;
   text-align: justify;
-  max-width: 60%; /* Alterado para 60% para ocupar até 60% da largura disponível */
+  max-width: 80%; /* Alterado para 80% para ocupar até 80% da largura disponível */
 }
 
 .experience::before,
