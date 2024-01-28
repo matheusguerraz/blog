@@ -198,7 +198,6 @@ nav a:hover {
   }
 }
 
-
 #introduct {
   margin-top: 3%;
   font-family:'Courier New', Courier, monospace;
@@ -207,7 +206,6 @@ nav a:hover {
   font-weight: bold;
   animation: digitation 1s;
 }
-
 
 #name {
   white-space: nowrap;
@@ -300,13 +298,9 @@ footer {
   }
 }
 
-
-
 .right-sidebar.delayed {
   animation: delayAnimation 2s ease-in-out;
 }
-
-
 
 .right-sidebar::-webkit-scrollbar {
   width: 6px;
@@ -315,33 +309,6 @@ footer {
 .right-sidebar::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
-}
-
-.experience {
-  position: relative;
-  margin-bottom: 10%; /* Adiciona um espaço entre as experiências */
-}
-
-.experience::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -20px;
-  bottom: 0;
-  width: 1px;
-  background-color: #fff;
-}
-
-.experience::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -26px;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  border-radius: 50%;
 }
 
 .about-description {
@@ -355,14 +322,38 @@ footer {
 }
 
 .experience {
+  position: relative;
   margin-top: 5%;
+  margin-bottom: 10%; /* Adiciona um espaço entre as experiências */
   color: aliceblue;
   font-size: 45px;
-  margin-bottom: 10px;
-  margin-left: 40%;
   text-align: justify;
   max-width: 60%; /* Alterado para 60% para ocupar até 60% da largura disponível */
 }
+
+.experience::before,
+.experience::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+}
+
+.experience::before {
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  width: 1px;
+}
+
+.experience::after {
+  top: 50%;
+  left: -26px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
 
 .right-sidebar::-webkit-scrollbar {
   width: 6px;
