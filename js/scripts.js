@@ -49,13 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault(); // Impede o comportamento padrão do link
     openTab('about'); // Chama a função openTab com o parâmetro 'about'
   });
-
-  // Event listener para o link "Projects"
-  const projectsLink = document.getElementById('projectsLink');
-  projectsLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    openTab('Projects'); // Chama a função openTab com o parâmetro 'Projects'
-  });
 });
 
 function openTab(tabName) {

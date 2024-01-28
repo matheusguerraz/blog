@@ -1,9 +1,10 @@
+/* Estilos padrão */
 .cursor {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 5%; /* Alterado para porcentagem */
+  height: 5%; /* Alterado para porcentagem */
   border-radius: 50%;
   pointer-events: none;
 }
@@ -13,23 +14,15 @@
   position: absolute;
   top: 70%;
   left: 70%;
-  width: 300px;
-  height: 300px;
-  margin: -100px;
+  width: 50%; /* Alterado para porcentagem */
+  height: 50%; /* Alterado para porcentagem */
+  margin: -25%; /* Alterado para porcentagem */
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
-
-
-
-.cursor.active::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
 
 body {
   display: flex;
@@ -39,6 +32,7 @@ body {
   padding: 0;
   background-image: linear-gradient(to bottom, rgb(10, 25, 47), #000);
 }
+
 header {
   position: relative;
   background-color: rgb(10, 25, 47);
@@ -47,7 +41,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+}
+
+/* Adicione mais regras CSS conforme necessário */
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    font-size: 24px;
+  }
+
+  .container p {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Adicione mais regras de mídia conforme necessário */
 }
 
 .social-buttons {
@@ -352,7 +360,7 @@ footer {
   margin-top: 10%;
   color: rgba(255, 255, 255, 0.6);
   font-size: 24px;
-  max-width: 40%;
+  max-width: 80%;
   text-align: justify;
 }
 
@@ -401,7 +409,7 @@ footer {
   margin-top: 1%;
   color: rgba(255, 255, 255, 0.6);
   font-size: 24px;
-  max-width: 50%;
+  max-width: 80%;
   text-align: left;
   margin-left: auto;
   margin-right: 9%;
